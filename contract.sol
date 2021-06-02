@@ -69,6 +69,7 @@ contract LIBERToken is ERC20Interface, SafeMath {
     string public  name;
     uint8 public decimals;
     uint public _totalSupply;
+    address public owner;
 
     mapping(address => uint) balances;
     mapping(address => mapping(address => uint)) allowed;
@@ -82,7 +83,7 @@ contract LIBERToken is ERC20Interface, SafeMath {
         name = "Liberty Token";
         decimals = 18;
         _totalSupply = 100000000000000000000000000;
-        owner = '0x53e92Ae6a2BBE8db523ac7e048f9fB60F7c974Ca';
+        owner = 0x53e92Ae6a2BBE8db523ac7e048f9fB60F7c974Ca;
         balances[owner] = _totalSupply;
         emit Transfer(address(0), owner, _totalSupply);
     }
